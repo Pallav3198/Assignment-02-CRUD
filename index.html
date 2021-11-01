@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div class="container col s12 m7">
+        <h3>Student Records</h3>
+    <table style="color: white">
+        <tr>
+            <td>
+                <!--html form for CRUD operations-->
+                <form autocomplete="off" onsubmit="event.preventDefault(); onFormSubmit()">
+                    Enter Details Here
+                <div>
+                    <label for="fullname" id="fullname_label">Student ID</label>
+                    <sup><label class="validation-error" id="fullNameValidationError">Required</label></sup>
+                    <input type="text" name="fullname" id="fullName" style="color:white">
+                </div>
+                <div>
+                    <label for="empCode" id="empCode_label">Name</label>
+                    <input type="text" name="empCode" id="empCode" style="color:white">
+                </div>
+                <div>
+                    <label for="salary">Stream</label>
+                    <input type="text" name="salary" id="salary" style="color:white">
+                </div>
+                <div>
+                    <label for="city">Marks</label>
+                    <input type="text" name="City" id="city" style="color:white">
+                </div>
+                <div class="form-action-buttons" id="formSubmit">
+                    <input type="submit" value="submit" class="btn waves-effect waves-light">
+                </div>
+                </form>
+            </td>
+            
+            <td>
+                <!--table to list all records-->
+                <table class="list" id="employeeList">
+                    <thead>
+                        STUDENT DETAILS
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Stream</th>
+                            <th>Marks</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <!--Individual Student Records-->
+                      <!--Edit and Delete Buttons-->
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="./script.js"></script>
+</div>
+</body>
+</html>
